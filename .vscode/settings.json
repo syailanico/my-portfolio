@@ -1,0 +1,8 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Default Dark Modern",
+  "editor.fontSize": 18,
+  "editor.wordWrap": "on",
+  "liveServer.settings.port": 5503,
+  "workbench.editor.doubleClickTabToToggleEditorGroupSizes": "expand"
+}

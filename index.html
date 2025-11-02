@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        lightMode: "class",
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-800 font-sans text-white">
+    <!-- Header -->
+    <header
+      class="bg-gray-900 fixed w-full top-0 left-0 z-50 shadow-lg light:bg-red-400"
+    >
+      <div
+        class="container mx-auto flex justify-between items-center px-6 md:px-20 py-4"
+      >
+        <div class="flex items-center space-x-3">
+          <div
+            class="w-10 h-10 rounded-full bg-yellow-400 flex items-center justify-center text-gray-900 font-bold text-lg tracking-wide shadow-md"
+          >
+            SY
+          </div>
+          <span class="font-semibold text-lg">Portfolio</span>
+        </div>
+        <!-- Tombol hamburger -->
+        <button
+          id="menu-btn"
+          class="md:hidden flex flex-col justify-center items-center space-y-1 focus:outline-none"
+        >
+          <span
+            class="block w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+        </button>
+
+        <!-- Navbar -->
+        <nav
+          id="menu"
+          class="hidden flex-col md:flex md:flex-row md:static absolute top-16 left-0 w-full md:w-auto bg-gray-900 md:bg-transparent text-center md:text-left shadow-md md:shadow-none transition-all duration-300"
+        >
+          <a
+            href="#"
+            class="hover:text-gray-800 hover:bg-white border-2 border-white py-2 px-4 rounded-full mx-4 my-2 md:my-0"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="hover:text-gray-800 hover:bg-white border-2 border-white py-2 px-4 rounded-full mx-4 my-2 md:my-0"
+            >About</a
+          >
+          <a
+            href="#projects"
+            class="hover:text-gray-800 hover:bg-white border-2 border-white py-2 px-4 rounded-full mx-4 my-2 md:my-0"
+            >Projects</a
+          >
+          <a
+            href="#experience"
+            class="hover:text-gray-800 hover:bg-white border-2 border-white py-2 px-4 rounded-full mx-4 my-2 md:my-0"
+            >Experience</a
+          >
+          <a
+            href="#contact"
+            class="hover:text-gray-800 hover:bg-white border-2 border-white py-2 px-4 rounded-full mx-4 my-2 md:my-0"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Tombol Toggle Mode -->
+        <button
+          id="toggleLight"
+          class="ml-4 px-3 py-1 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-100"
+        >
+          🌙
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="container mx-auto px-6 md:px-40 pt-28 md:pt-32 min-h-screen flex flex-col md:flex-row items-center justify-center md:space-x-12 space-y-10 md:space-y-0"
+    >
+      <img
+        src="img/STPR.jpg"
+        alt="Foto Profil"
+        class="w-60 h-60 md:w-[340px] md:h-[340px] rounded-full object-cover object-center border-4 border-white"
+      />
+
+      <div class="space-y-5 text-center md:text-left">
+        <h2 class="text-2xl md:text-3xl font-semibold text-gray-200">
+          Hello! I’m Syaila — a web developer and designer.
+        </h2>
+        <p class="text-gray-300 max-w-lg mx-auto md:mx-0">
+          I enjoy crafting websites that look great and feel even better to use.
+          Always learning, always building!
+        </p>
+        <button
+          class="px-5 py-2 border-2 border-white rounded-full hover:bg-white hover:text-gray-900 transition"
+        >
+          See Projects
+        </button>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section
+      id="about"
+      class="py-20 bg-gradient-to-b from-gray-800 to-gray-700 text-center md:text-left"
+    >
+      <div
+        class="container mx-auto px-6 md:px-40 flex flex-col md:flex-row items-center md:space-x-12 space-y-10 md:space-y-0"
+      >
+        <div class="flex-1 space-y-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+            About Me
+          </h2>
+          <p class="text-gray-200 leading-relaxed text-sm md:text-base">
+            Hi, I'm
+            <span class="font-semibold text-yellow-400">Syaila</span> — a web
+            developer who loves design, music, and creative things. I'm always
+            excited to learn new technologies and create something useful.
+          </p>
+          <p class="text-gray-200 leading-relaxed text-sm md:text-base">
+            Besides coding, I enjoy listening to music, writing, and playing
+            games. I find it most rewarding to see a small idea transform into a
+            tangible work of art.
+          </p>
+        </div>
+
+        <div class="flex-1 flex justify-center">
+          <img
+            src="img/ru.jpg"
+            alt="About Image"
+            class="rounded-2xl w-80 h-100 object-cover border-4 border-white shadow-lg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECT SECTION ===== -->
+    <section id="projects" class="py-20 bg-gray-900 text-center">
+      <div class="container mx-auto px-6 md:px-40">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">
+          My Projects
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-10">
+          <!-- Card 1 -->
+          <div
+            class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-700 hover:scale-105 transition-transform"
+          >
+            <img
+              src="img/digital3.png"
+              alt="Project 1"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6 text-left">
+              <h3 class="font-bold text-xl mb-2 text-white">
+                Digital Invitation 1
+              </h3>
+              <p class="text-gray-300 mb-4 text-sm">
+                The Classic Elegant theme features shades of cream, brown, and
+                gold.
+              </p>
+              <a
+                href="https://undangan-halu.vercel.app/"
+                class="text-yellow-400 font-semibold hover:underline"
+                >See Project →</a
+              >
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-700 hover:scale-105 transition-transform"
+          >
+            <img
+              src="img/digital1.png"
+              alt="Project 2"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6 text-left">
+              <h3 class="font-bold text-xl mb-2 text-white">
+                Digital Invitation 2
+              </h3>
+              <p class="text-gray-300 mb-4 text-sm">
+                Simple digital invitation with floral theme
+              </p>
+              <a
+                href="https://undangan-root-syaila.vercel.app/"
+                class="text-yellow-400 font-semibold hover:underline"
+                >See Project →</a
+              >
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg border border-gray-700 hover:scale-105 transition-transform"
+          >
+            <img
+              src="img/digital2.png"
+              alt="Project 3"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6 text-left">
+              <h3 class="font-bold text-xl mb-2 text-white">
+                Digital Invitation 3
+              </h3>
+              <p class="text-gray-300 mb-4 text-sm">
+                Interactive digital invitation with elegant black and white
+                theme.
+              </p>
+              <a
+                href="https://syailaruuto-85jj.vercel.app/"
+                class="text-yellow-400 font-semibold hover:underline"
+                >See Project →</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="experience"
+      class="container mx-auto py-20 bg-gradient-to-b from-gray-900 to-gray-800"
+    >
+      <h3 class="text-3xl font-bold text-center mb-10">Experience</h3>
+      <div class="overflow-x-auto">
+        <table
+          class="min-w-full border border-white rounded-lg shadow-lg text-center"
+        >
+          <thead class="bg-gray-900 text-white">
+            <tr>
+              <th class="py-3 px-4 border border-white">Tahun</th>
+              <th class="py-3 px-4 border border-white">Kegiatan</th>
+              <th class="py-3 px-4 border border-white">Keterangan</th>
+            </tr>
+          </thead>
+          <tbody class="bg-gray-800 text-white">
+            <tr
+              class="border border-gray-300 hover:bg-gray-700 transition duration-300"
+            >
+              <td class="py-3 px-4 border border-gray-300">2025</td>
+              <td class="py-3 px-4 border border-gray-300">Prakerin</td>
+              <td class="py-3 px-4 border border-gray-300">
+                Pra Magang di perusahaan Coquette
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="py-20 bg-gray-800 text-center">
+      <div class="container mx-auto px-6 md:px-40">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">
+          Contact Me
+        </h2>
+
+        <p class="text-gray-300 max-w-xl mx-auto mb-10">
+          Have a project in mind or just want to say hi? Feel free to reach out
+          — I’d love to connect with you! 💬
+        </p>
+
+        <form class="max-w-xl mx-auto space-y-6 text-left">
+          <div>
+            <label for="name" class="block mb-2 text-gray-200"
+              >Nama Lengkap</label
+            >
+            <input
+              id="name"
+              type="text"
+              class="w-full px-4 py-2 rounded-md bg-gray-900 border border-gray-600 text-white focus:outline-none focus:border-yellow-400"
+              placeholder="Masukkan nama kamu..."
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block mb-2 text-gray-200">Email</label>
+            <input
+              id="email"
+              type="email"
+              class="w-full px-4 py-2 rounded-md bg-gray-900 border border-gray-600 text-white focus:outline-none focus:border-yellow-400"
+              placeholder="Masukkan email kamu..."
+            />
+          </div>
+
+          <div>
+            <label for="message" class="block mb-2 text-gray-200">Pesan</label>
+            <textarea
+              id="message"
+              rows="5"
+              class="w-full px-4 py-2 rounded-md bg-gray-900 border border-gray-600 text-white focus:outline-none focus:border-yellow-400"
+              placeholder="Tulis pesanmu di sini..."
+            ></textarea>
+          </div>
+
+          <div class="text-center">
+            <button
+              type="submit"
+              class="bg-yellow-400 text-gray-900 font-bold py-2 px-6 rounded-full hover:bg-yellow-300 transition"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-gray-900 py-10 text-center text-gray-400 text-sm">
+      <div class="container mx-auto px-6 md:px-20">
+        <p class="text-lg font-semibold text-white mb-4">Connect with me</p>
+
+        <!-- Social Media Icons -->
+        <div class="flex justify-center space-x-6 mb-6">
+          <a
+            href="https://instagram.com/"
+            target="_blank"
+            class="text-gray-300 hover:text-pink-500 transition-transform transform hover:scale-110"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              class="w-7 h-7"
+            >
+              <path
+                d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.75-.88a.88.88 0 1 1-1.75 0 .88.88 0 0 1 1.75 0Z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://github.com/"
+            target="_blank"
+            class="text-gray-300 hover:text-white transition-transform transform hover:scale-110"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              class="w-7 h-7"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12 2C6.477 2 2 6.486 2 12.021c0 4.427 2.865 8.184 6.839 9.504.5.091.682-.217.682-.482
+            0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.157-1.11-1.466-1.11-1.466-.909-.621.069-.609.069-.609
+            1.004.07 1.532 1.033 1.532 1.033.893 1.532 2.341 1.089 2.91.833.091-.647.35-1.089.636-1.341-2.22-.253-4.555-1.113-4.555-4.954
+            0-1.094.39-1.988 1.029-2.688-.104-.254-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.027a9.57 9.57 0 0 1 2.5-.337 9.54 9.54 0 0 1 2.5.337
+            c1.91-1.296 2.75-1.027 2.75-1.027.544 1.378.202 2.396.099 2.65.64.7 1.029 1.594 1.029 2.688 0 3.851-2.338 4.698-4.566 4.946.359.309.679.918.679 1.852
+            0 1.336-.012 2.415-.012 2.742 0 .267.18.577.688.479A10.021 10.021 0 0 0 22 12.021C22 6.486 17.523 2 12 2Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            class="text-gray-300 hover:text-blue-400 transition-transform transform hover:scale-110"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              class="w-7 h-7"
+            >
+              <path
+                d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.43.36a9.09 9.09 0 0 1-2.88 1.1A4.52 4.52 0 0 0 16.11 0c-2.63 0-4.77 2.17-4.77 4.84 0 .38.04.75.12 1.1A12.9 12.9 0 0 1 1.67.89a4.92 4.92 0 0 0-.65 2.43c0 1.68.83 3.16 2.1 4.02A4.39 4.39 0 0 1 .96 7v.05c0 2.36 1.63 4.33 3.8 4.77a4.52 4.52 0 0 1-2.13.08c.6 1.9 2.35 3.28 4.42 3.32A9.07 9.07 0 0 1 0 19.54 12.77 12.77 0 0 0 6.92 21c8.3 0 12.83-7.04 12.83-13.15 0-.2-.01-.39-.02-.58A9.49 9.49 0 0 0 23 3Z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://linkedin.com/"
+            target="_blank"
+            class="text-gray-300 hover:text-blue-600 transition-transform transform hover:scale-110"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              class="w-7 h-7"
+            >
+              <path
+                d="M20.447 20.452H16.89v-5.569c0-1.328-.027-3.037-1.852-3.037-1.854 0-2.137 1.445-2.137 2.94v5.666H9.337V9h3.409v1.561h.048c.476-.9 1.635-1.852 3.366-1.852 3.598 0 4.263 2.37 4.263 5.455v6.288ZM5.337 7.433a1.987 1.987 0 1 1 0-3.974 1.987 1.987 0 0 1 0 3.974Zm1.781 13.019H3.557V9h3.561v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.206 24 24 23.226 24 22.271V1.729C24 .774 23.206 0 22.225 0Z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <p class="text-gray-400">© 2025 Syaila. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+      const lines = menuBtn.querySelectorAll("span");
+
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
+
+        // Animasi garis burger → silang (X)
+        lines[0].classList.toggle("rotate-45");
+        lines[0].classList.toggle("translate-y-1.5");
+        lines[1].classList.toggle("opacity-0");
+        lines[2].classList.toggle("-rotate-45");
+        lines[2].classList.toggle("-translate-y-1.5");
+      });
+
+      const toggleBtn = document.getElementById("toggleLight");
+      const html = document.documentElement;
+
+      toggleBtn.addEventListener("click", () => {
+        html.classList.toggle("light");
+        toggleBtn.textContent = html.classList.contains("light") ? "☀️" : "🌙";
+      });
+    </script>
+  </body>
+</html>
